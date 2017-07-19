@@ -1,17 +1,20 @@
 import React from 'react'
 import Header from '../components/Header'
-import { initStore, inputChange } from '../store'
+import { initStore, inputChange, search } from '../store'
 import withRedux from 'next-redux-wrapper'
+import Results from '../components/Results'
 
 class Index extends React.Component { 
   static getInitProps ({ store }) {
     store.dispatch(inputChange())
+    store.dispatch(search())    
   }
 
   render() {
     return (
       <div>
         <Header />
+        <Results />
       </div>
     )
   }

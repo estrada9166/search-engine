@@ -74,7 +74,7 @@ var Header = function (_Component) {
           fileName: _jsxFileName,
           lineNumber: 13
         }
-      }, 'Download free pic'), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css', __source: {
+      }, 'Search Engine'), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css', __source: {
           fileName: _jsxFileName,
           lineNumber: 14
         }

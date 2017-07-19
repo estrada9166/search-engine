@@ -1,14 +1,19 @@
 import React, {Component} from 'react'
 import Head from 'next/head'
-import { inputChange } from '../store'
+import { inputChange, search } from '../store'
 import { Col, Row, FormControl, Button, InputGroup } from 'react-bootstrap';
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-class Download extends Component {
-  inputChange = (e) => {
-    const text = e.target.value
-    this.props.inputChange(text)
+class Search extends Component {
+  inputChange = e => {
+    const text = e.target.value;
+    this.props.inputChange(text);
+  }
+
+  search = state => {
+    const text = state.text;
+    this.props.search(text);
   }
 
   render () {
@@ -25,7 +30,7 @@ class Download extends Component {
                 <InputGroup>
                   <FormControl onChange={(e) => this.inputChange(e)} type="text" placeholder="Search engine"/>
                   <InputGroup.Button>
-                    <Button bsStyle="primary"><span className="glyphicon glyphicon-search"></span> Search</Button>
+                    <Button bsStyle="primary" onClick={() => this.search(state)}><span className="glyphicon glyphicon-search"></span> Search</Button>
                   </InputGroup.Button>
                 </InputGroup>
               </Col>
@@ -45,8 +50,9 @@ const mapStateToProps = ( state ) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     inputChange: bindActionCreators(inputChange, dispatch),
+    search: bindActionCreators(search, dispatch)
   }
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Download);
+export default connect(mapStateToProps, mapDispatchToProps)(Search);

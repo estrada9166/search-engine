@@ -38,6 +38,10 @@ var _nextReduxWrapper = require('next-redux-wrapper');
 
 var _nextReduxWrapper2 = _interopRequireDefault(_nextReduxWrapper);
 
+var _Results = require('../components/Results');
+
+var _Results2 = _interopRequireDefault(_Results);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = '/Users/alejandroestrada/Documents/Code/makeItReal/Elite/Data-base/search-engine/search-app/pages/index.js?entry';
@@ -58,12 +62,17 @@ var Index = function (_React$Component) {
       return _react2.default.createElement('div', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 15
         }
       }, _react2.default.createElement(_Header2.default, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14
+          lineNumber: 16
+        }
+      }), _react2.default.createElement(_Results2.default, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
         }
       }));
     }
@@ -73,6 +82,7 @@ var Index = function (_React$Component) {
       var store = _ref.store;
 
       store.dispatch((0, _store.inputChange)());
+      store.dispatch((0, _store.search)());
     }
   }]);
 

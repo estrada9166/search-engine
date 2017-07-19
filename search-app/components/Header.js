@@ -10,7 +10,7 @@ class Header extends Component {
     return (
       <div>
         <Head>
-          <title>Download free pic</title>
+          <title>Search Engine</title>
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" />
         </Head>
         <div>
